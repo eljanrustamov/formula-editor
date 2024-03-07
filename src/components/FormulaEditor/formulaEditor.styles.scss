@@ -1,0 +1,31 @@
+@import "../../styles/colors";
+
+.formula-editor {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .formula-header {
+    display: flex;
+    justify-content: center;
+    padding: 16px 24px;
+    border-bottom: 1px solid #edf0f3;
+
+    .title {
+      display: flex;
+      gap: 10px;
+      font-size: 20px;
+      align-items: center;
+      color: $text-color;
+    }
+  }
+}
+
+.btn-add {
+  color: $primary-color;
+  transition: 0.3s all;
+  &:hover {
+    color: $primary-color-darken;
+    transform: scale(1.1);
+  }
+}
