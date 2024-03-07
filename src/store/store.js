@@ -6,10 +6,7 @@ const useFormulaStore = create((set) => ({
   isCollapseOpen: false,
   totalValue: 0,
   //
-  selectedOptions: [
-    { name: "name 1", category: "category 1", value: 9, id: "1" },
-    { name: "name 2", category: "category 2", value: 16, id: "2" },
-  ],
+  selectedOptions: [],
   filteredOptions: [],
   isDropdownOpen: false,
   editedTagValue: "x",

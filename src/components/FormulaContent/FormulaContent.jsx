@@ -40,6 +40,12 @@ export default function FormulaContent() {
   const { data } = useQuery("datas", fetchOptions);
   const autoCompleteRef = useRef(null);
 
+  useEffect(() => {
+    if (data) {
+      setOptions(data);
+    }
+  }, [data, setOptions]);
+
   const trimStartOnly = (str) => str.replace(/^\s+/, "");
 
   const onClickDropdown = (option) => {
@@ -53,12 +59,6 @@ export default function FormulaContent() {
     setSelectedOptions(restSelectedOptions);
     setIsDropdownOpen(false);
   };
-
-  useEffect(() => {
-    if (data) {
-      setOptions(data);
-    }
-  }, [data, setOptions]);
 
   const search = (event) => {
     let _filteredOptions;
